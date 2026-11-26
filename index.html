@@ -1,164 +1,297 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" data-theme="red">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Graphics & Artworks</title>
-    <meta name="description"
-        content="Portfolio of Leonardo Graphics & Artworks, a premium graphic designer specializing in branding, 3D art, and UI/UX design.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="images/logo2.png" type="image/png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LEONARDO — graphic design work: posts, product labels, banners and wedding cards. See the work and ask about your project.">
+  <meta name="theme-color" content="#f6f2ec">
+  <title>Leonardo Graphics & Artworks</title>
+  <link rel="icon" type="image/webp" href="assets/images/mark.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/images/cover.webp">
+  <link rel="stylesheet" href="css/template.css">
+  <script src="js/main.js" defer></script>
 </head>
-
 <body>
-    <canvas id="antigravity-bg"></canvas>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Logo" class="nav-logo">
-                <div class="logo-text">
-                    <span class="brand-title">LEONARDO</span>
-                    <span class="brand-sub">GRAPHICS</span>
-                </div>
-            </a>
-            <div style="display: flex; align-items: center; gap: 2rem;">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <button id="theme-toggle" class="theme-btn" title="Toggle Theme"><i
-                        class="fa-solid fa-moon"></i></button>
-            </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+  <header class="nav" id="nav">
+    <a class="logo" href="#home" aria-label="Leonardo Graphics home">
+      <img class="logo-mark" src="assets/images/mark.webp" alt="" width="42" height="42">
+      <span class="logo-text">LEONARDO GRAPHICS <br> & ARTWORKS</span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+      <a href="#home" data-link="home">HOME</a>
+      <a href="#letter" data-link="letter">ABOUT</a>
+      <a href="#gallery" data-link="gallery">GALLERY</a>
+      <a href="#work" data-link="work">MY WORKS</a>
+      <a href="#packages" data-link="packages">PACKAGES</a>
+      <a href="#contact" data-link="contact">CONTACT US</a>
     </nav>
+    <a class="nav-cta" href="#contact">LET'S TALK <span>↗</span></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="visible">
-        <div class="container">
-            <div class="hero-content">
-                <h1>ELEVATING BRANDS THROUGH DESIGN</h1>
-                <p>Transforming abstract ideas into premium visual narratives and immersive digital realities.</p>
-                <a href="work.html" class="cta-button">View My Work</a>
-            </div>
+  <div class="side-rail" aria-hidden="true"><span>SCROLL TO SWITCH REALITIES</span><i></i></div>
+
+  <main>
+    <section class="chapter hero" id="home" data-theme="red" data-nav="home">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow reveal">
+            <span class="issue-tag">SELECTED WORK</span>
+            <span>INDEPENDENT GRAPHIC DESIGNER / COLOMBO, SRI LANKA</span>
+          </div>
+          <h1 class="hero-title reveal" style="--delay: 80ms">
+            <span>WHERE CRAFT</span>
+            <span class="outline">BECOMES</span>
+            <span>CULTURE<i class="dot">.</i></span>
+          </h1>
+          <p class="hero-sub reveal" style="--delay: 160ms">Graphic design made with care — posts, product labels, banners, wedding cards and the small details that make a piece worth keeping.</p>
+          <div class="hero-actions reveal" style="--delay: 240ms">
+            <a class="btn" href="#gallery">SEE THE WORK <span>↘</span></a>
+            <a class="btn btn-ghost" href="#packages">SEE PACKAGES <span>→</span></a>
+          </div>
+          <div class="stats reveal" style="--delay: 320ms">
+            <div><strong>20+</strong><span>PROJECTS DELIVERED</span></div>
+            <div><strong>06</strong><span>DESIGN CATEGORIES</span></div>
+            <div><strong>01</strong><span>STUDIO IN FOCUS</span></div>
+          </div>
         </div>
+
+        <div class="hero-visual reveal" style="--delay: 200ms">
+          <div class="burst" aria-hidden="true">NEW<br>DESIGNS!</div>
+          <div class="portrait-card">
+            <div class="tape" aria-hidden="true"></div>
+            <img class="portrait-img" src="assets/images/_myBanner.png" alt="Featured artwork from the Leonardo studio">
+            <div class="portrait-caption"><span>VISUAL DIRECTION</span><span>NO. 001</span></div>
+          </div>
+          <div class="sticker sticker-one" aria-hidden="true">OPEN FOR<br>COLLABS</div>
+          <div class="sticker sticker-two" aria-hidden="true">CONTACT<br>US</div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#letter" aria-label="Scroll to the editor's letter"><span></span>SCROLL</a>
     </section>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>POSTS ✦ PRODUCT LABELS ✦ BANNERS ✦ WEDDING CARDS ✦ BRAND DETAILS ✦ PRINT ✦&nbsp;</span>
+        <span>POSTS ✦ PRODUCT LABELS ✦ BANNERS ✦ WEDDING CARDS ✦ BRAND DETAILS ✦ PRINT ✦&nbsp;</span>
+      </div>
+    </div>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="section-title">SELECTED WORKS</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item reveal-item">
-                    <img src="images/POST/1.png" alt="Featured Project 1" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Creative Concept 01</h3>
-                        <p>Branding & Design</p>
-                    </div>
-                </div>
-                <div class="portfolio-item reveal-item">
-                    <img src="images/POST/my_1.png" alt="Featured Project 2" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Creative Concept 02</h3>
-                        <p>Visual Arts</p>
-                    </div>
-                </div>
-                <div class="portfolio-item reveal-item">
-                    <img src="images/POST/wish (4).png" alt="Featured Project 3" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Creative Concept 03</h3>
-                        <p>Graphic Design</p>
-                    </div>
-                </div>
-                
-            </div>
+    <section class="chapter" id="letter" data-theme="violet" data-nav="letter">
+      <div class="section-head reveal">
+        <span class="chapter-no">ABOUT THE STUDIO</span>
+        <h2>DESIGN WITH<br><em>A PURPOSE.</em></h2>
+      </div>
+      <div class="career-grid">
+        <div class="story reveal">
+          <p class="lead">Leonardo Graphics &amp; Artworks is a small design practice in Colombo, Sri Lanka. I make posts, product labels, banners and wedding cards that look considered and feel right in the hand.</p>
+          <p>Every project starts with a conversation and ends with files you can actually use. No jargon, no noise — just clear decisions, careful craft and work that earns its place.</p>
+          <img class="editor-image" src="assets/images/editor.webp" alt="Thilina, main designer at Leonardo Graphics &amp; Artworks" loading="lazy">
+          <div class="skills" aria-label="Services">
+            <span>POST DESIGN</span><span>PRODUCT LABELS</span><span>BANNERS</span><span>WEDDING CARDS</span><span>BRAND DETAILS</span><span>TYPOGRAPHY</span><span>PRINT</span><span>DIGITAL ART</span>
+          </div>
         </div>
+        <ol class="timeline reveal" style="--delay: 120ms">
+          <li><span class="year">NOW</span><div><h3>Open for projects</h3><p>Bookings open for posts, labels, banners and wedding card suites.</p></div></li>
+          <li><span class="year">2023</span><div><h3>Expanded practice</h3><p>Adding product labels and campaign banners to the studio workflow.</p></div></li>
+          <li><span class="year">2020</span><div><h3>Beyond the poster</h3><p>Moving into full identity details, print finishing and small-run production.</p></div></li>
+          <li><span class="year">2018</span><div><h3>First ink</h3><p>Starting with a sketchbook, a stack of markers and an obsession with bold type.</p></div></li>
+        </ol>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text reveal-left">
-                    <h2>DESIGN IS THE SILENT AMBASSADOR OF YOUR BRAND.</h2>
-                    <p>I am a multidisciplinary graphic designer based in the digital realm. My work is defined by a
-                        commitment to minimalism, precision, and the pursuit of visual excellence.</p>
-                    <p>With over 8 years of experience, I help ambitious brands stand out through thoughtful design and
-                        high-end aesthetics.</p>
-                </div>
-                <div class="services-list">
-                    <div class="service-item reveal-item">
-                        <i class="fa-solid fa-bezier-curve"></i>
-                        <h3>Post DESIGN</h3>
-                        <p>Creative and engaging social media visuals that capture attention.</p>
-                    </div>
-                    <div class="service-item reveal-item">
-                        <i class="fa-solid fa-cube"></i>
-                        <h3>T-SHIRT DESIGN</h3>
-                        <p>Custom apparel designs with unique concepts and high-quality detailing.</p>
-                    </div>
-                    <div class="service-item reveal-item">
-                        <i class="fa-solid fa-mobile-screen"></i>
-                        <h3>LEAFLET DESIGN</h3>
-                        <p>Clean and impactful promotional materials that communicate effectively.</p>
-                    </div>
-                    <div class="service-item reveal-item">
-                        <i class="fa-solid fa-pen-nib"></i>
-                        <h3>VISTITING CARD DESIGN</h3>
-                        <p>Professional and memorable business card designs that reflect your brand identity.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Create Something Great...</h2>
-            <div class="contact-container">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="name@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
+    <section class="chapter" id="gallery" data-theme="blue" data-nav="gallery">
+      <div class="section-head reveal">
+        <span class="chapter-no">RECENT WORK</span>
+        <h2>GRAPHICS THAT<br><em>GET SEEN.</em></h2>
+      </div>
+      <div class="work-grid journal-grid">
+        <article class="work-card journal-card reveal" tabindex="0">
+          <div class="work-art"><img src="assets/images/story-01.webp" alt="Social post design" loading="lazy"><span>SOCIAL<br>POSTS</span><i>01</i></div>
+          <div class="work-info"><h3>Social Posts</h3><p>SOCIAL / DIGITAL</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card journal-card reveal" style="--delay: 60ms" tabindex="0">
+          <div class="work-art"><img src="assets/images/story-02.webp" alt="Product label design" loading="lazy"><span>PRODUCT<br>LABELS</span><i>02</i></div>
+          <div class="work-info"><h3>Product Labels</h3><p>PRINT / PACKAGING</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card journal-card reveal" style="--delay: 120ms" tabindex="0">
+          <div class="work-art"><img src="assets/images/story-03.webp" alt="Banner design" loading="lazy"><span>BANNERS</span><i>03</i></div>
+          <div class="work-info"><h3>Banners</h3><p>DIGITAL / DISPLAY</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card journal-card reveal" tabindex="0">
+          <div class="work-art"><img src="assets/images/story-04.webp" alt="Wedding card design" loading="lazy"><span>WEDDING<br>CARDS</span><i>04</i></div>
+          <div class="work-info"><h3>Wedding Cards</h3><p>PRINT / STATIONERY</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card journal-card reveal" style="--delay: 60ms" tabindex="0">
+          <div class="work-art"><img src="assets/images/story-05.webp" alt="Brand detail design" loading="lazy"><span>BRAND<br>DETAILS</span><i>05</i></div>
+          <div class="work-info"><h3>Brand Details</h3><p>IDENTITY / PRINT</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card journal-card reveal" style="--delay: 120ms" tabindex="0">
+          <div class="work-art"><img src="assets/images/story-06.webp" alt="Digital graphic design" loading="lazy"><span>DIGITAL<br>GRAPHICS</span><i>06</i></div>
+          <div class="work-info"><h3>Digital Graphics</h3><p>ART / SOCIAL</p><span class="arrow">↗</span></div>
+        </article>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Leonardo Graphics & Artworks. All rights reserved.</p>
+    <section class="chapter" id="work" data-theme="lime" data-nav="work">
+      <div class="section-head reveal">
+        <span class="chapter-no">SELECTED WORK</span>
+        <h2>WORK THAT<br><em>POPS OFF PAGE.</em></h2>
+      </div>
+      <div class="work-grid">
+        <article class="work-card reveal" tabindex="0">
+          <div class="work-art"><img src="assets/images/gallery-01.webp" alt="Visual studies artwork" loading="lazy"><span>VISUAL<br>STUDIES</span><i>01</i></div>
+          <div class="work-info"><h3>Visual Studies</h3><p>DIGITAL ART / COMPOSITION</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card reveal" style="--delay: 60ms" tabindex="0">
+          <div class="work-art"><img src="assets/images/gallery-02.webp" alt="Invitation design" loading="lazy"><span>INVITATION<br>SUITE</span><i>02</i></div>
+          <div class="work-info"><h3>Invitation Suite</h3><p>PRINT / STATIONERY</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card reveal" style="--delay: 120ms" tabindex="0">
+          <div class="work-art"><img src="assets/images/gallery-03.webp" alt="T-shirt design" loading="lazy"><span>WEARABLES</span><i>03</i></div>
+          <div class="work-info"><h3>Wearables</h3><p>APPAREL / ILLUSTRATION</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card reveal" tabindex="0">
+          <div class="work-art"><img src="assets/images/gallery-04.webp" alt="Hang tag design" loading="lazy"><span>HANG<br>TAGS</span><i>04</i></div>
+          <div class="work-info"><h3>Hang Tags</h3><p>BRAND DETAILS</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card reveal" style="--delay: 60ms" tabindex="0">
+          <div class="work-art"><img src="assets/images/gallery-05.webp" alt="Visiting card design" loading="lazy"><span>VISITING<br>CARDS</span><i>05</i></div>
+          <div class="work-info"><h3>Visiting Cards</h3><p>IDENTITY SYSTEM</p><span class="arrow">↗</span></div>
+        </article>
+        <article class="work-card reveal" style="--delay: 120ms" tabindex="0">
+          <div class="work-art"><img src="assets/images/gallery-06.webp" alt="Wish series poster design" loading="lazy"><span>WISH<br>SERIES</span><i>06</i></div>
+          <div class="work-info"><h3>Wish Series</h3><p>SOCIAL EDITIONS</p><span class="arrow">↗</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="packages" data-theme="orange" data-nav="packages">
+      <div class="section-head reveal">
+        <span class="chapter-no">THE PACKAGES</span>
+        <h2>GRAPHIC<br><em>DESIGN PACKAGES.</em></h2>
+      </div>
+      <div class="packages-grid">
+        <article class="package featured reveal">
+          <span class="ribbon">MOST PICKED</span>
+          <span class="package-no">01 / SOCIAL</span>
+          <h3>Posts</h3>
+          <p class="price">CUSTOM<span>/ quote</span></p>
+          <div class="package-line"></div>
+          <ul><li>Static and carousel posts</li><li>Platform-ready sizing</li><li>Type, colour and layout systems</li><li>Ready-to-publish files</li></ul>
+          <a class="btn btn-full" href="#contact">REQUEST POSTS <span>→</span></a>
+        </article>
+        <article class="package reveal" style="--delay: 100ms">
+          <span class="package-no">02 / PRODUCT</span>
+          <h3>Product<br>Labels</h3>
+          <p class="price">CUSTOM<span>/ quote</span></p>
+          <div class="package-line"></div>
+          <ul><li>Label artwork and layout</li><li>Print-ready dielines</li><li>Detail, barcode and spacing cleanup</li><li>Small-run and production files</li></ul>
+          <a class="btn btn-full" href="#contact">REQUEST LABELS <span>→</span></a>
+        </article>
+        <article class="package reveal" style="--delay: 200ms">
+          <span class="package-no">03 / ADVERTISING</span>
+          <h3>Banners</h3>
+          <p class="price">CUSTOM<span>/ quote</span></p>
+          <div class="package-line"></div>
+          <ul><li>Web and social banners</li><li>Event and display banners</li><li>Print-ready banners</li><li>Consistent campaign systems</li></ul>
+          <a class="btn btn-full" href="#contact">REQUEST BANNERS <span>→</span></a>
+        </article>
+        <article class="package reveal" style="--delay: 300ms">
+          <span class="package-no">04 / CELEBRATION</span>
+          <h3>Wedding<br>Cards</h3>
+          <p class="price">CUSTOM<span>/ quote</span></p>
+          <div class="package-line"></div>
+          <ul><li>Invitation suites</li><li>Save-the-date cards</li><li>RSVP and insert cards</li><li>Envelope and print-ready files</li></ul>
+          <a class="btn btn-full" href="#contact">REQUEST CARDS <span>→</span></a>
+        </article>
+      </div>
+      <p class="packages-note reveal">Need something else? Send the brief — we'll shape a package around it.</p>
+    </section>
+
+    <section class="chapter process" data-theme="black" data-nav="process">
+      <div class="section-head reveal">
+        <span class="chapter-no">THE METHOD</span>
+        <h2>FOUR PANELS.<br><em>ONE BIG STORY.</em></h2>
+      </div>
+      <div class="process-steps">
+        <div class="step reveal"><span>01</span><h3>LISTEN</h3><p>We talk goals, audience and deadline before a single line is drawn.</p></div>
+        <div class="step reveal" style="--delay: 80ms"><span>02</span><h3>BLUEPRINT</h3><p>Sketches, moodboards and a direction that earns its place.</p></div>
+        <div class="step reveal" style="--delay: 160ms"><span>03</span><h3>BUILD</h3><p>Design, refinement and all the tiny details that matter.</p></div>
+        <div class="step reveal" style="--delay: 240ms"><span>04</span><h3>DROP</h3><p>Final files, launch assets and after-care.</p></div>
+      </div>
+    </section>
+
+    <section class="chapter contact" id="contact" data-theme="red" data-nav="contact">
+      <div class="contact-grid">
+        <div class="contact-copy reveal">
+          <span class="chapter-no">THE CONTACT</span>
+          <h2>LET'S MAKE<br><em>SOMETHING LOUD.</em></h2>
+          <p>Fastest route: message me on WhatsApp, or use the form and your email app opens with everything ready to go.</p>
+          <div class="contact-buttons">
+            <a class="btn whatsapp-cta" href="https://wa.me/94701117372?text=Hi%20Leonardo%2C%20I%27d%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener">CHAT ON WHATSAPP <span>↗</span></a>
+            <a class="btn facebook-cta" href="https://www.facebook.com/profile.php?id=61586692315876" target="_blank" rel="noopener">FOLLOW ON FACEBOOK <span>↗</span></a>
+          </div>
+          <div class="direct-card">
+            <span class="direct-label">DIRECT LINE</span>
+            <a id="contactEmail" href="mailto:leonardo.graphics.and.artworks@gmail.com">leonardo.graphics.and.artworks@gmail.com</a>
+            <button class="copy-btn" type="button" data-copy="contactEmail">COPY EMAIL <span>⧉</span></button>
+          </div>
+          <div class="social-row">
+            <a href="https://wa.me/94701117372" target="_blank" rel="noopener">WHATSAPP</a>
+            <a href="https://www.facebook.com/profile.php?id=61586692315876" target="_blank" rel="noopener">FACEBOOK</a>
+            <a href="studio.html">THE STUDIO</a>
+          </div>
         </div>
-    </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <form class="contact-form reveal" style="--delay: 120ms" id="contactForm">
+          <div class="form-row">
+            <label>YOUR NAME<input type="text" name="name" placeholder="Sumathi Kasthuriarachchi" required></label>
+            <label>YOUR EMAIL<input type="email" name="email" placeholder="skasthuriarachchi@gmail.com" required></label>
+          </div>
+          <div class="form-row">
+            <label>PROJECT TYPE
+              <select name="project" required>
+                <option value="" disabled selected>Select one</option>
+                <option>Post Design</option>
+                <option>Product Label Design</option>
+                <option>Logo Design</option>
+                <option>Wedding Card Design</option>
+                <option>Or Something else</option>
+              </select>
+            </label>
+            <label>BUDGET
+              <select name="budget" required>
+                <option value="" disabled selected>Select a range</option>
+                <option>Under Rs.750</option>
+                <option>Rs.750 — Rs.1,000</option>
+                <option>Rs.1,000 — Rs.3,500</option>
+                <option>Rs.3,500+</option>
+              </select>
+            </label>
+          </div>
+          <label>THE BRIEF<textarea name="message" rows="5" placeholder="What are we making, and when does it need to drop?" required></textarea></label>
+          <button class="btn btn-send" type="submit">SEND THE SIGNAL <span>↗</span></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    <script src="js/main.js"></script>
+  <footer class="footer">
+    <div class="footer-top"><span>LEONARDO GRAPHICS<br> & ARTWORKS</span><span>DESIGN WITH A PULSE.</span></div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> LEONARDO GRAPHICS &amp; ARTWORKS</span><a href="#home">BACK TO TOP ↑</a></div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/94701117372?text=Hi%20Leonardo%2C%20I%27d%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    <span>CHAT ON WHATSAPP</span>
+  </a>
+
 </body>
-
 </html>
