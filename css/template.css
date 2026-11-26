@@ -397,6 +397,10 @@ input:focus, select:focus, textarea:focus { transform: translate(-2px, -2px); bo
   70% { transform: translate(calc(var(--fan-x) * 1.08), var(--fan-y)) rotate(var(--fan-rotate)); opacity: 1; }
   100% { transform: translate(var(--fan-x), var(--fan-y)) rotate(var(--fan-rotate)); opacity: 1; }
 }
+@keyframes cardStackIn {
+  0% { transform: translateY(44px) scale(0.96); opacity: 0; }
+  100% { transform: none; opacity: 1; }
+}
 
 @media (max-width: 1100px) {
   .side-rail { display: none; }
@@ -411,7 +415,7 @@ input:focus, select:focus, textarea:focus { transform: translate(-2px, -2px); bo
   .packages-grid { grid-template-columns: 1fr; gap: 34px; padding: 0; }
   .package { grid-area: auto; width: 100%; aspect-ratio: auto; transform: none; }
   .js .packages-grid .package.reveal, .js .packages-grid:not(.is-dealt) .package, .packages-grid.is-dealt .package:hover, .packages-grid.is-dealt .package:focus-visible { transform: none; --lift: 0px; --fan-rotate: 0deg; }
-  .js .packages-grid.is-dealt .package.reveal { animation: none; }
+  .js .packages-grid.is-dealt .package.reveal { animation: cardStackIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0ms) backwards; }
   .process-steps { grid-template-columns: repeat(2, 1fr); gap: 34px 20px; }
   .step:nth-child(2)::before { display: none; }
   .article-layout { grid-template-columns: minmax(0, 760px); }
