@@ -14,6 +14,20 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = window.matchMedia("(pointer: fine)").matches;
 
+  const backTop = document.createElement("button");
+  backTop.className = "back-to-top";
+  backTop.type = "button";
+  backTop.setAttribute("aria-label", "Back to top");
+  backTop.innerHTML = '<svg class="back-top-ring" viewBox="0 0 44 44" aria-hidden="true"><circle class="back-top-track" cx="22" cy="22" r="19"/><circle class="back-top-progress" cx="22" cy="22" r="19"/></svg><span class="back-top-arrow">↑</span>';
+  const backTopRing = backTop.querySelector(".back-top-progress");
+  const backTopCircumference = 2 * Math.PI * 19;
+  backTopRing.style.strokeDasharray = String(backTopCircumference);
+  backTopRing.style.strokeDashoffset = String(backTopCircumference);
+  body.appendChild(backTop);
+  backTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+  });
+
   function setTheme(theme) {
     if (!theme || root.dataset.theme === theme) return;
     root.dataset.theme = theme;
@@ -75,12 +89,30 @@
     }
   };
 
+  const cardHand = document.querySelector(".packages-grid");
+  if (cardHand) {
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+      cardHand.classList.add("is-dealt");
+    } else {
+      const handObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-dealt");
+          handObserver.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -15% 0px", threshold: 0.25 });
+      handObserver.observe(cardHand);
+    }
+  }
+
   let ticking = false;
   function updateScrollUI() {
     const max = document.documentElement.scrollHeight - window.innerHeight;
     const ratio = max > 0 ? window.scrollY / max : 0;
     if (progress) progress.style.width = `${(ratio * 100).toFixed(2)}%`;
     if (nav) nav.classList.toggle("is-scrolled", window.scrollY > 20);
+    backTopRing.style.strokeDashoffset = String(backTopCircumference * (1 - ratio));
+    backTop.classList.toggle("is-visible", window.scrollY > 180);
     ticking = false;
   }
   window.addEventListener("scroll", () => {
@@ -217,6 +249,27 @@
         button.textContent = "SELECT AND COPY";
       }
     });
+  });
+
+  const contextTape = document.createElement("div");
+  contextTape.className = "context-tape";
+  contextTape.setAttribute("role", "status");
+  contextTape.setAttribute("aria-live", "polite");
+  const contextTapeLabel = document.createElement("span");
+  contextTapeLabel.textContent = "RIGHT CLICK BLOCKED — DO NOT CROSS";
+  contextTape.appendChild(contextTapeLabel);
+  body.appendChild(contextTape);
+
+  let contextTapeTimer = 0;
+  document.addEventListener("contextmenu", event => {
+    event.preventDefault();
+    contextTape.classList.remove("is-visible");
+    void contextTape.offsetWidth;
+    contextTapeLabel.textContent = "";
+    window.requestAnimationFrame(() => { contextTapeLabel.textContent = "RIGHT CLICK BLOCKED — DO NOT CROSS"; });
+    contextTape.classList.add("is-visible");
+    window.clearTimeout(contextTapeTimer);
+    contextTapeTimer = window.setTimeout(() => contextTape.classList.remove("is-visible"), 1500);
   });
 
   const year = document.getElementById("year");
