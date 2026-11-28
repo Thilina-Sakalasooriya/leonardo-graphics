@@ -1,4 +1,4 @@
-window.MAGAZINE_STORIES = [
+window.PORTFOLIO_STORIES = [
   {
     id: 'the-art-of-seeing',
     number: '01',
