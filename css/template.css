@@ -197,7 +197,7 @@ p { line-height: 1.65; }
 .hero-visual { position: relative; justify-self: center; width: min(100%, 430px); padding: 24px; }
 .portrait-card { position: relative; border: 3px solid #0b0b0b; background: #f8f1e5; color: #0b0b0b; box-shadow: 14px 14px 0 var(--accent); transform: rotate(2deg); overflow: hidden; animation: cardFloat 6s ease-in-out infinite; }
 .tape { position: absolute; top: 12px; left: 50%; z-index: 4; width: 130px; height: 28px; background: color-mix(in srgb, var(--accent-2) 80%, white); border: 1px solid #0b0b0b; transform: translateX(-50%) rotate(-6deg); opacity: 0.9; }
-.portrait-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #111; border-bottom: 3px solid #0b0b0b; }
+.portrait-img { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: #111; border-bottom: 3px solid #0b0b0b; }
 .portrait-caption { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-top: 3px solid #0b0b0b; font-family: var(--mono-font); font-size: 0.68rem; letter-spacing: 0.12em; }
 
 .burst {
