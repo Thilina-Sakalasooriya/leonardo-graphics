@@ -1,5 +1,5 @@
 (function () {
-  var stories = window.MAGAZINE_STORIES || [];
+  var stories = window.PORTFOLIO_STORIES || [];
   if (!stories.length) return;
 
   var params = new URLSearchParams(window.location.search);
@@ -16,8 +16,8 @@
   if (meta) meta.setAttribute('content', story.deck);
 
   setText('article-category', story.category);
-  setText('article-issue', 'Project N° 01');
-  setText('article-number', 'Project ' + story.number);
+  setText('article-issue', 'Project ' + story.number);
+  setText('article-number', 'Story ' + story.number);
   setText('article-title', story.title);
   setText('article-deck', story.deck);
   setText('article-author', story.author);
@@ -40,6 +40,9 @@
     return el;
   }
 
+  var tocList = element('ul', 'article-toc-list');
+  toc.appendChild(tocList);
+
   story.blocks.forEach(function (block) {
     if (block.type === 'lead' || block.type === 'p') {
       body.appendChild(element('p', block.type === 'lead' ? 'article-lead' : '', block.text));
@@ -50,7 +53,7 @@
       headings.push(heading);
       var link = element('a', '', block.text);
       link.href = '#' + heading.id;
-      toc.appendChild(element('li', '', '')).appendChild(link);
+      tocList.appendChild(element('li', '', '')).appendChild(link);
     } else if (block.type === 'quote') {
       var quote = element('blockquote', 'article-quote');
       quote.appendChild(element('p', '', '“' + block.text + '”'));
@@ -72,7 +75,7 @@
     }
   });
 
-  if (window.MagazineReveal) window.MagazineReveal.observe(body);
+  if (window.RevealOnScroll) window.RevealOnScroll.observe(body);
 
   var next = stories[(index + 1) % stories.length];
   var nextLink = byId('next-story');
