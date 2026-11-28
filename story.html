@@ -10,12 +10,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/template.css">
-  <script src="js/main.js" defer></script>
-  <script src="js/stories.js" defer></script>
-  <script src="js/article.js" defer></script>
+  <link rel="stylesheet" href="css/template.css?v=2">
+  <script src="js/main.js?v=2" defer></script>
+  <script src="js/stories.js?v=2" defer></script>
+  <script src="js/article.js?v=2" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">SKIP TO CONTENT</a>
   <div class="page-progress" aria-hidden="true"><span></span></div>
 
   <header class="nav" id="nav">
@@ -35,7 +36,7 @@
     <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
   </header>
 
-  <main>
+  <main id="main">
     <section class="chapter article-chapter" data-theme="red" data-nav="gallery">
       <div class="article-shell">
         <div class="eyebrow reveal">
@@ -47,14 +48,14 @@
         <h1 class="article-title reveal" style="--delay: 80ms" id="article-title">A piece from the portfolio</h1>
         <p class="article-deck reveal" style="--delay: 160ms" id="article-deck"></p>
         <div class="article-meta reveal" style="--delay: 240ms">
-          <img src="assets/images/editor.webp" alt="Thilina" class="byline-avatar">
+          <img src="assets/images/editor.webp" alt="Thilina" class="byline-avatar" width="900" height="1100">
           <div><strong id="article-author">Thilina</strong><span id="article-date"></span></div>
           <span class="meta-divider"></span>
           <span id="article-time"></span>
           <a href="index.html#gallery">← ALL WORK</a>
         </div>
         <figure class="article-hero reveal" style="--delay: 320ms">
-          <img id="article-image" src="assets/images/story-01.webp" alt="">
+          <img id="article-image" src="assets/images/story-01.webp" alt="" width="1200" height="900">
           <figcaption id="article-image-caption">From the Leonardo archive</figcaption>
         </figure>
       </div>
@@ -64,7 +65,7 @@
       <div class="article-layout">
         <aside class="article-aside" aria-label="In this project">
           <span class="chapter-no">IN THIS WORK</span>
-          <nav id="article-toc"></nav>
+          <nav id="article-toc" aria-label="On this page"></nav>
           <a class="aside-back" href="index.html#gallery">← BACK TO THE GALLERY</a>
         </aside>
         <div class="article-body" id="article-body"></div>
@@ -144,7 +145,7 @@
 
   <footer class="footer">
     <div class="footer-top"><span>LEONARDO GRAPHICS<br> & ARTWORKS</span><span>DESIGN WITH A PULSE.</span></div>
-    <div class="footer-bottom"><span>© <span id="year">2026</span> LEONARDO GRAPHICS &amp; ARTWORKS</span><a href="index.html">BACK TO TOP ↑</a></div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> LEONARDO GRAPHICS &amp; ARTWORKS</span><a href="#main">BACK TO TOP ↑</a></div>
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/94701117372?text=Hi%20Leonardo%2C%20I%27d%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
