@@ -10,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/images/cover.webp">
-  <link rel="stylesheet" href="css/template.css">
-  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/template.css?v=2">
+  <script src="js/main.js?v=2" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">SKIP TO CONTENT</a>
   <div class="page-progress" aria-hidden="true"><span></span></div>
 
   <header class="nav" id="nav">
@@ -36,7 +36,7 @@
 
   <div class="side-rail" aria-hidden="true"><span>SCROLL TO SWITCH REALITIES</span><i></i></div>
 
-  <main>
+  <main id="main">
     <section class="chapter hero" id="home" data-theme="red" data-nav="home">
       <div class="hero-grid">
         <div class="hero-copy">
@@ -64,7 +64,7 @@
         <div class="hero-visual reveal" style="--delay: 200ms">
           <div class="burst" aria-hidden="true">NEW<br>DESIGNS!</div>
           <div class="portrait-card">
-            <img class="portrait-img" src="assets/images/my-banner.png" alt="Featured artwork from the Leonardo studio">
+            <img class="portrait-img" src="assets/images/my-banner.png" alt="Featured artwork from the Leonardo studio" width="620" height="877">
             <div class="portrait-caption"><span>VISUAL DIRECTION</span><span>NO. 001</span></div>
           </div>
           <div class="sticker sticker-one" aria-hidden="true">OPEN FOR<br>COLLABS</div>
@@ -90,7 +90,7 @@
         <div class="story reveal">
           <p class="lead">Leonardo Graphics &amp; Artworks is a small design practice in Kiribathgoda, Sri Lanka. I make posts, product labels, banners and wedding cards that look considered and feel right in the hand.</p>
           <p>Every project starts with a conversation and ends with files you can actually use. No jargon, no noise — just clear decisions, careful craft and work that earns its place.</p>
-          <img class="editor-image" src="assets/images/editor.webp" alt="Thilina, main designer at Leonardo Graphics &amp; Artworks" loading="lazy">
+          <img class="editor-image" src="assets/images/editor.webp" alt="Thilina, main designer at Leonardo Graphics &amp; Artworks" loading="lazy" width="900" height="1100">
           <div class="editor-caption">
             <strong>THILINA SAKALASOORIYA</strong><br>
             <span>MAIN DESIGNER / FOUNDER</span>
@@ -115,30 +115,30 @@
         <h2>GRAPHICS THAT<br><em>GET SEEN.</em></h2>
       </div>
       <div class="work-grid journal-grid">
-        <article class="work-card journal-card reveal" tabindex="0">
-          <div class="work-art"><img src="assets/images/story-01.webp" alt="Social post design" loading="lazy"><i>01</i></div>
+        <a class="work-card journal-card reveal" href="story.html?id=the-art-of-seeing">
+          <div class="work-art"><img src="assets/images/story-01.webp" alt="Social post design" loading="lazy" width="1200" height="900"><i>01</i></div>
           <div class="work-info"><h3>Social Posts</h3><p>SOCIAL / DIGITAL</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card journal-card reveal" style="--delay: 60ms" tabindex="0">
-          <div class="work-art"><img src="assets/images/story-02.webp" alt="Product label design" loading="lazy"><i>02</i></div>
+        </a>
+        <a class="work-card journal-card reveal" style="--delay: 60ms" href="story.html?id=quiet-objects">
+          <div class="work-art"><img src="assets/images/story-02.webp" alt="Product label design" loading="lazy" width="1200" height="900"><i>02</i></div>
           <div class="work-info"><h3>Product Labels</h3><p>PRINT / PACKAGING</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card journal-card reveal" style="--delay: 120ms" tabindex="0">
-          <div class="work-art"><img src="assets/images/story-03.webp" alt="Banner design" loading="lazy"><i>03</i></div>
+        </a>
+        <a class="work-card journal-card reveal" style="--delay: 120ms" href="story.html?id=studio-restraint">
+          <div class="work-art"><img src="assets/images/story-03.webp" alt="Banner design" loading="lazy" width="1200" height="900"><i>03</i></div>
           <div class="work-info"><h3>Banners</h3><p>DIGITAL / DISPLAY</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card journal-card reveal" tabindex="0">
-          <div class="work-art"><img src="assets/images/story-04.webp" alt="Wedding card design" loading="lazy"><i>04</i></div>
+        </a>
+        <a class="work-card journal-card reveal" href="story.html?id=color-considered">
+          <div class="work-art"><img src="assets/images/story-04.webp" alt="Wedding card design" loading="lazy" width="1200" height="900"><i>04</i></div>
           <div class="work-info"><h3>Wedding Cards</h3><p>PRINT / STATIONERY</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card journal-card reveal" style="--delay: 60ms" tabindex="0">
-          <div class="work-art"><img src="assets/images/story-05.webp" alt="Brand detail design" loading="lazy"><i>05</i></div>
+        </a>
+        <a class="work-card journal-card reveal" style="--delay: 60ms" href="story.html?id=the-paper-test">
+          <div class="work-art"><img src="assets/images/story-05.webp" alt="Brand detail design" loading="lazy" width="1200" height="900"><i>05</i></div>
           <div class="work-info"><h3>Brand Details</h3><p>IDENTITY / PRINT</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card journal-card reveal" style="--delay: 120ms" tabindex="0">
-          <div class="work-art"><img src="assets/images/story-06.webp" alt="Digital graphic design" loading="lazy"><i>06</i></div>
+        </a>
+        <a class="work-card journal-card reveal" style="--delay: 120ms" href="story.html?id=making-it-last">
+          <div class="work-art"><img src="assets/images/story-06.webp" alt="Digital graphic design" loading="lazy" width="750" height="750"><i>06</i></div>
           <div class="work-info"><h3>Digital Graphics</h3><p>ART / SOCIAL</p><span class="arrow">↗</span></div>
-        </article>
+        </a>
       </div>
     </section>
 
@@ -148,30 +148,30 @@
         <h2>WORK THAT<br><em>POPS OFF PAGE.</em></h2>
       </div>
       <div class="work-grid">
-        <article class="work-card reveal" tabindex="0">
-          <div class="work-art"><img src="assets/images/gallery-01.webp" alt="Visual studies artwork" loading="lazy"><i>01</i></div>
+        <a class="work-card reveal" href="story.html?id=the-art-of-seeing">
+          <div class="work-art"><img src="assets/images/gallery-01.webp" alt="Visual studies artwork" loading="lazy" width="900" height="900"><i>01</i></div>
           <div class="work-info"><h3>Visual Studies</h3><p>DIGITAL ART / COMPOSITION</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card reveal" style="--delay: 60ms" tabindex="0">
-          <div class="work-art"><img src="assets/images/gallery-02.webp" alt="Invitation design" loading="lazy"><i>02</i></div>
+        </a>
+        <a class="work-card reveal" style="--delay: 60ms" href="story.html?id=quiet-objects">
+          <div class="work-art"><img src="assets/images/gallery-02.webp" alt="Invitation design" loading="lazy" width="900" height="900"><i>02</i></div>
           <div class="work-info"><h3>Invitation Suite</h3><p>PRINT / STATIONERY</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card reveal" style="--delay: 120ms" tabindex="0">
-          <div class="work-art"><img src="assets/images/gallery-03.webp" alt="T-shirt design" loading="lazy"><i>03</i></div>
+        </a>
+        <a class="work-card reveal" style="--delay: 120ms" href="story.html?id=the-paper-test">
+          <div class="work-art"><img src="assets/images/gallery-03.webp" alt="T-shirt design" loading="lazy" width="1200" height="900"><i>03</i></div>
           <div class="work-info"><h3>Wearables</h3><p>APPAREL / ILLUSTRATION</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card reveal" tabindex="0">
-          <div class="work-art"><img src="assets/images/gallery-04.webp" alt="Hang tag design" loading="lazy"><i>04</i></div>
+        </a>
+        <a class="work-card reveal" href="story.html?id=color-considered">
+          <div class="work-art"><img src="assets/images/gallery-04.webp" alt="Hang tag design" loading="lazy" width="1200" height="900"><i>04</i></div>
           <div class="work-info"><h3>Hang Tags</h3><p>BRAND DETAILS</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card reveal" style="--delay: 60ms" tabindex="0">
-          <div class="work-art"><img src="assets/images/gallery-05.webp" alt="Visiting card design" loading="lazy"><i>05</i></div>
+        </a>
+        <a class="work-card reveal" style="--delay: 60ms" href="story.html?id=making-it-last">
+          <div class="work-art"><img src="assets/images/gallery-05.webp" alt="Visiting card design" loading="lazy" width="1200" height="800"><i>05</i></div>
           <div class="work-info"><h3>Visiting Cards</h3><p>IDENTITY SYSTEM</p><span class="arrow">↗</span></div>
-        </article>
-        <article class="work-card reveal" style="--delay: 120ms" tabindex="0">
-          <div class="work-art"><img src="assets/images/gallery-06.webp" alt="Wish series poster design" loading="lazy"><i>06</i></div>
+        </a>
+        <a class="work-card reveal" style="--delay: 120ms" href="story.html?id=studio-restraint">
+          <div class="work-art"><img src="assets/images/gallery-06.webp" alt="Wish series poster design" loading="lazy" width="900" height="1100"><i>06</i></div>
           <div class="work-info"><h3>Wish Series</h3><p>SOCIAL EDITIONS</p><span class="arrow">↗</span></div>
-        </article>
+        </a>
       </div>
     </section>
 
