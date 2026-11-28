@@ -4,7 +4,6 @@
   root.classList.add("js");
 
   const CONTACT_EMAIL = "leonardo.graphics.and.artworks@gmail.com";
-  const EMAIL_ENDPOINT = "";
 
   const sections = [...document.querySelectorAll("section[data-theme]")];
   const navLinks = [...document.querySelectorAll("[data-link]")];
@@ -79,7 +78,7 @@
     revealItems.forEach(item => revealObserver.observe(item));
   }
 
-  window.MagazineReveal = {
+  window.RevealOnScroll = {
     observe(scope) {
       (scope || document).querySelectorAll(".reveal").forEach(item => {
         if (item.classList.contains("is-visible")) return;
@@ -133,12 +132,14 @@
       link.addEventListener("click", () => {
         body.classList.remove("nav-open");
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
       });
     });
     document.addEventListener("keydown", event => {
       if (event.key === "Escape") {
         body.classList.remove("nav-open");
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
       }
     });
   }
@@ -166,22 +167,8 @@
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
 
-  async function sendToEndpoint(payload) {
-    if (!EMAIL_ENDPOINT) return false;
-    try {
-      const response = await fetch(EMAIL_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload)
-      });
-      return response.ok;
-    } catch (error) {
-      return false;
-    }
-  }
-
   if (form && status) {
-    form.addEventListener("submit", async event => {
+    form.addEventListener("submit", event => {
       event.preventDefault();
       if (!form.reportValidity()) return;
 
@@ -194,33 +181,8 @@
       const subject = `New project inquiry — ${project}`;
       const body = `Name: ${name}\nEmail: ${email}\nProject: ${project}\nBudget: ${budget}\n\nBrief:\n${message}`;
 
-      status.textContent = "SENDING THE SIGNAL...";
-      const delivered = await sendToEndpoint({ name, email, project, budget, message, subject });
-
-      if (delivered) {
-        status.textContent = "MESSAGE SENT. I'LL GET BACK TO YOU SOON.";
-        form.reset();
-        return;
-      }
-
       status.textContent = "OPENING YOUR EMAIL APP. IF NOTHING OPENS, COPY THE EMAIL ABOVE.";
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    });
-  }
-
-  const subscribeForm = document.getElementById("subscribe-form");
-  const subscribeNote = document.getElementById("form-note");
-  if (subscribeForm && subscribeNote) {
-    subscribeForm.addEventListener("submit", event => {
-      event.preventDefault();
-      const input = subscribeForm.querySelector('input[type="email"]');
-      const value = input ? input.value.trim() : "";
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        subscribeNote.textContent = "PLEASE ENTER A VALID EMAIL ADDRESS.";
-        return;
-      }
-      subscribeNote.textContent = "THANK YOU — THIS IS A DEMO FORM, SO NO EMAIL WAS SENT.";
-      input.value = "";
     });
   }
 
@@ -245,7 +207,7 @@
         await copyText(target.textContent.trim());
         button.innerHTML = 'COPIED <span>✓</span>';
         setTimeout(() => { button.innerHTML = 'COPY EMAIL <span>⧉</span>'; }, 1800);
-      } catch (error) {
+      } catch {
         button.textContent = "SELECT AND COPY";
       }
     });
