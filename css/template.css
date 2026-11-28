@@ -199,6 +199,7 @@ p { line-height: 1.65; }
 .hero-visual { position: relative; justify-self: center; width: min(100%, 430px); padding: 24px; }
 .portrait-card { position: relative; border: 3px solid #0b0b0b; background: #f8f1e5; color: #0b0b0b; box-shadow: 14px 14px 0 var(--accent); transform: rotate(2deg); overflow: hidden; animation: cardFloat 6s ease-in-out infinite; }
 .portrait-img { width: 100%; height: auto; object-fit: contain; background: #111; border-bottom: 3px solid #0b0b0b; }
+.portrait-img--thilina { aspect-ratio: 1 / 1; object-fit: cover; object-position: center 15%; }
 .portrait-caption { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-top: 3px solid #0b0b0b; font-family: var(--mono-font); font-size: 0.68rem; letter-spacing: 0.12em; }
 
 .burst {
@@ -240,7 +241,7 @@ p { line-height: 1.65; }
 .career-grid { position: relative; z-index: 1; width: min(1240px, 100%); margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 90px); }
 .lead { margin-top: 0; font-size: clamp(1.35rem, 2.3vw, 2.1rem); font-weight: 600; line-height: 1.25; }
 .story p { max-width: 58ch; line-height: 1.7; opacity: 0.82; }
-.editor-image { width: min(100%, 460px); margin: 34px 0; border: 3px solid var(--line); box-shadow: 8px 8px 0 var(--accent); }
+.editor-image { width: min(100%, 460px); aspect-ratio: 1 / 1; object-fit: cover; object-position: center 15%; margin: 34px 0; border: 3px solid var(--line); box-shadow: 8px 8px 0 var(--accent); }
 .editor-caption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; width: min(100%, 460px); margin: -18px 0 34px; padding: 12px 14px; border: 2px solid var(--line); background: var(--panel); box-shadow: 6px 6px 0 var(--accent); }
 .editor-caption strong { font-family: var(--display-font); font-size: 1.8rem; line-height: 1; letter-spacing: 0.04em; }
 .editor-caption span { font-family: var(--mono-font); font-size: 0.68rem; letter-spacing: 0.12em; opacity: 0.8; }
@@ -338,7 +339,7 @@ input:focus, select:focus, textarea:focus { transform: translate(-2px, -2px); bo
 .article-title { margin: 28px 0 22px; font-family: var(--display-font); font-size: clamp(4rem, 10vw, 9rem); line-height: 0.86; letter-spacing: 0.01em; text-transform: uppercase; }
 .article-deck { max-width: 66ch; margin: 0 auto; font-size: clamp(1rem, 1.6vw, 1.25rem); line-height: 1.6; opacity: 0.85; }
 .article-meta { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 34px; font-family: var(--mono-font); font-size: 0.72rem; letter-spacing: 0.08em; }
-.byline-avatar { width: 44px; height: 44px; object-fit: cover; border: 2px solid var(--ink); border-radius: 50%; }
+.byline-avatar { width: 44px; height: 44px; object-fit: cover; object-position: center 15%; border: 2px solid var(--ink); border-radius: 50%; }
 .article-meta strong { display: block; font-size: 0.8rem; }
 .article-meta span { opacity: 0.78; }
 .meta-divider { width: 1px; height: 24px; background: var(--line); }
